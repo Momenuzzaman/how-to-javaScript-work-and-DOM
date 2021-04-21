@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore DOM</title>
+    <style>
+        article{
+            border: 4px solid tomato;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 6px;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Explore DOM</h1>
+        <p id="first">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+          ad recusandae, veritatis minima veniam itaque maxime inventore? Eius
+          maxime ducimus temporibus, repudiandae officiis deleniti maiores
+          sapiente tenetur nihil facere dicta?
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+          eveniet earum molestias consectetur assumenda aut.
+        </p>
+      </section>
+      <section >
+        <article >
+          <h3>Article-1</h3>
+          <p class="author">author-1</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, odit
+            deserunt incidunt dolorem laboriosam nemo modi rerum provident,
+            animi explicabo atque consequuntur ullam nobis qui neque. Fugit hic
+            asperiores doloribus!
+          </p>
+        </article>
+        <article class="article-2">
+          <h3>Article-2</h3>
+          <p class="author">autho-2</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, odit
+            deserunt incidunt dolorem laboriosam nemo modi rerum provident,
+            animi explicabo atque consequuntur ullam nobis qui neque. Fugit hic
+            asperiores doloribus!
+          </p>
+        </article>
+        <article>
+          <h3>Article-3</h3>
+          <p class="author">author-3</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, odit
+            deserunt incidunt dolorem laboriosam nemo modi rerum provident,
+            animi explicabo atque consequuntur ullam nobis qui neque. Fugit hic
+            asperiores doloribus!
+          </p>
+        </article>
+      </section>
+    </main>
+    <script>
+     var first = document.getElementById("first");
+      first.style.backgroundColor = "yellow";
+      first.style.color = "red";
+      first.style.fontSize = "30px";
+     var authors = document.getElementsByClassName("author");
+        for(var i = 0 ; i<authors.length; i++){
+           var element = authors[i];
+           element.innerHTML = "lekhok-" +(i+1);
+           element.style.backgroundColor = "lightblue";
+        }
+        var specialArticle = document.querySelector(".article-2 h3");
+        specialArticle.style.backgroundColor = "red";
+    </script>
+  </body>
+</html>
